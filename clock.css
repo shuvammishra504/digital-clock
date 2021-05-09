@@ -4,3 +4,45 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Pangolin', cursive;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-div{
+    margin: 50  px;
+}
+
+.title{
+    font-size: 50px;
+}
+
+.time-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: red; */
+}
+
+.day, .month, .tarikh, .barsa {
+    padding-right: 10px;
+}
+
+.time{
+    display: flex;
+}
