@@ -9,14 +9,10 @@ const samaya = document.querySelector('.samaya');
 
 function NepalDate(){
     const time = Date();
-    var month = time.slice(4, 7);
-    var tarikhValue = time.slice(8, 10);
     var din = time.slice(0, 4);
     var year = time.slice(11, 15);
 
     day.innerHTML = din;
-    maina.innerHTML = month;
-    tarikh.innerHTML = tarikhValue;
     barsa.innerHTML = year
 }
 
@@ -26,6 +22,20 @@ function myFunction(){
   samaya.innerHTML = timeValue;
 }
 
+function month(){
+  const newDate = new Date();
+  var anotherDate = new Date()
+  newDate.setMonth(0);
+  var newGate = newDate.setDate(28);
+  var year = newDate.setFullYear(2078);
+  var months = ["Baisakh","Jestha","Ashar","Shrawn","Bhadra","Ashwin","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"];
+  // var gate = newDate.slice(7, 9);
+
+  maina.innerHTML = months[newDate.getMonth()];
+  console.log(newDate);
+}
+
+setInterval(month, 1000);
 
 setInterval(myFunction, 1000);
 
