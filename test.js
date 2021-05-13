@@ -1,13 +1,12 @@
 const para = document.querySelector('.test');
+const gate = document.querySelector('.gate');
+const barsa = document.querySelector('.barsa');
 
-var newDate = new Date();
-var anotherDate = new Date()
-newDate.setMonth(0); 
-var newGate = newDate.setDate(28);
-var year = newDate.setFullYear(2078);
-var months = ["Baisakh","Jestha","Ashar","Shrawn","Bhadra","Ashwin","Kartik","Mangsir","Poush","Magh","Falgun","Chaitra"];
-var 
+function myFunction(){
+    var time = new Date();
+        console.log(
+        time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+        );  
+}
 
-console.log(newDate)
-
-para.innerHTML = months[newDate.getMonth()];
+setInterval(myFunction, 1000)
